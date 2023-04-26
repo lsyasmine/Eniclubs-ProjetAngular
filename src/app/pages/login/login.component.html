@@ -1,0 +1,86 @@
+<div class="header bg-gradient-danger py-7 py-lg-8">
+  <div class="container">
+    <div class="header-body text-center mb-7">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-6" style="    margin-top: -50px;">
+          <h1 class="text-white">Welcome To EniClubs!</h1>
+   
+          
+       
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="separator separator-bottom separator-skew zindex-100">
+    <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container mt--8 pb-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-5 col-md-7" style="margin-left: 500px;
+    margin-top: -90px;">
+     
+      <div class="card bg-secondary shadow border-0">
+      
+        <div class="card-body px-lg-5 py-lg-5">
+          <svg xmlns="http://www.w3.org/2000/svg" style ="margin-top: -50px;
+          margin-left: 70px;
+          margin-bottom: 20; "width="180" height="180" fill="currentColor" class="bi bi-person-lock" viewBox="0 0 16 16">
+            <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 5.996V14H3s-1 0-1-1 1-4 6-4c.564 0 1.077.038 1.544.107a4.524 4.524 0 0 0-.803.918A10.46 10.46 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h5ZM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z"/>
+          </svg>
+
+          <form role="form">
+            <div class="form-group mb-3">
+              <div class="input-group input-group-alternative">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i></i></span>
+                </div>
+                <input class="form-control" placeholder="Prenom" type="text" name="prenom"  [(ngModel)]= "model.prenom" />
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <div class="input-group input-group-alternative">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i ></i></span>
+                </div>
+                <input class="form-control" placeholder="Nom" type="text" name="nom"  [(ngModel)]= "model.nom" />
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <div class="input-group input-group-alternative">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                </div>
+                <input class="form-control" placeholder="Email" type="email" name="email"  [(ngModel)]= "model.email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group input-group-alternative">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                </div>
+                <input class="form-control" placeholder="Mot de passe" type="password" name="mdp"  [(ngModel)]= "model.mdp" />
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <div class="input-group input-group-alternative">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i ></i></span>
+                </div>
+                <input class="form-control" placeholder="Code" type="text" name="code"  [(ngModel)]= "model.code" />
+              </div>
+            </div>
+            <div class="text-center">
+              <button   type="button" class="btn btn-primary my-4" (click)= "loginAdmin()">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<img  style="    margin-top: -580px;
+position: absolute;" src="../assets/img/brand/teacher.png">

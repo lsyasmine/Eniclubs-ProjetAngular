@@ -1,0 +1,61 @@
+
+
+    
+    <!--Main Content-->
+    <div class="my-5">
+      <div class="mx-auto w-25 " style="max-width:100%;">
+        <h2 class="text-center mb-3">Update Club</h2>
+        <form  [formGroup]="form" (ngSubmit)="submit()" >
+
+          
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="description" class="form-label"> description du club</label>
+              <input id="description"  formControlName="description" type="text" name="description" class="form-control" placeholder="noveau description du club" required>
+            </div>
+          </div>
+
+          
+          
+          
+         
+            
+          
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="nb_membre" class="form-label">nb_membre</label>
+              <textarea id="nb_membre" formControlName="nb_membre" type="text" name="nb_membre"  class="form-control" placeholder="nb max des membres" required></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="type" class="form-label">type</label>
+              <textarea id="type" formControlName="type" type="text" name="type"  class="form-control" placeholder="nouveau type du club" required></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="responsable" class="form-label">responsable</label>
+              <textarea id="responsable" formControlName="responsable" type="text" name="responsable"  class="form-control" placeholder="nouveau responsable" required></textarea>
+            </div>
+          </div>
+
+
+
+         
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <button [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Submit">Button</button>
+            </div>
+          </div>
+
+          <div>
+            
+          </div>
+        </form>
+  
+      </div>
+    </div>
+    

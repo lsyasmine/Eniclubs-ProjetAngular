@@ -1,0 +1,46 @@
+body {
+    background-color: Azure;
+    font-family: sans-serif;
+    font-size: 90%
+    }
+    h2{
+    color: DarkSlateGray;
+    }
+    table{
+    border-collapse: collapse;
+    }
+    th, td {
+    border: 1px solid Gray;
+    padding: 10px;
+    text-align: left;
+    }
+    th {
+    color: White;
+    background-color: MediumSeaGreen;
+    }
+    .pause {
+    background-color: Wheat;
+    font-style: italic;
+    }
+    tr th:first-child, tr td:first-child {
+    background-color: SlateBlue;
+    color: white;
+    font-weight: bold;
+    text-align: right;
+    }
+    tr td:nth-last-child(2){
+    background-color: LightSteelBlue;
+    }
+    tr td:last-child{
+      background-color: Silver;}
+    td:nth-child(2){
+      color:rgb(57, 61, 61);
+    }
+    td:nth-child(3){
+      color:rgb(88, 85, 85);
+    }
+    td:hover{
+      border:3px solid Red;
+      color:Black;
+    }
+

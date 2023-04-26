@@ -1,0 +1,99 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!--a routerLinkActive="active"style="margin-top: -120px ;" [routerLink]="['/ajout-prof']" class="btn btn-primary btn-lg">Ajouter un Enseignant</a-->
+      
+     </div> 
+  </div>
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7">
+  <!-- Table -->
+  <div class="row">
+    <div class="col">
+      <div class="card shadow" style="    margin-top: -60px;">
+        <div class="card-header border-0">
+          <div class="col-12 m-3 text-right">
+            <a href="#!" class="btn btn-primary m-2" [routerLink]="['/user-profile']">
+              Menu principale
+            </a>
+          </div>
+          <h3 class="mb-0 align-items-center ">Liste des Demandes des événements</h3>
+         
+        </div>
+        <div class="table-responsive">
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Nom de club</th>
+                <th scope="col">Nom de l'Event</th>
+                <th scope="col">Type de l'Event</th>
+                <th scope="col">Date de l'Event</th>
+                <th scope="col">duree de l'Event</th>
+                <th scope="col">Description</th>
+                <th scope="col">Objectif</th>
+                <th scope="col">Place</th>
+                <th scope="col">Budget</th>
+                <th scope="col">Email de demandeur</th>
+                <th scope="col">Tel demandeur</th>
+                <th scope="col">Date de demande</th>
+                <th scope="col">url image</th>
+                <th scope="col">Actions </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let Fevent of Fevents">
+               
+                <td>{{Fevent.nomClub}}</td>
+                <td>{{Fevent.nomEvent}}</td>
+                <td>{{Fevent.type}}</td>
+                <td>{{Fevent.dateEvent}}</td>
+                <td>{{Fevent.dureeEvent}}</td>
+                <td>{{Fevent.description}}</td>
+                <td>{{Fevent. objectifsEvent}}</td>
+                <td>{{Fevent.place}}</td>
+                <td>{{Fevent.budget}}</td>
+                <td>{{Fevent.mailDemandeur}}</td>
+                <td>{{Fevent.telDemandeur}}</td>
+                <td>{{Fevent.dateDemande}}</td>
+                <td>{{Fevent.urlImage}}</td>
+                <td class="text-right">
+                  <div class="btn btn-warning btn-xs"
+               >Valider</div>
+               <button class="btn btn-danger btn-xs" (click)="removeE(Fevent.id)" type="button">Non Valider</button>
+                </td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer py-4">
+          <nav aria-label="...">
+            <ul class="pagination justify-content-end mb-0">
+              <li class="page-item disabled">
+                <a class="page-link" href="javascript:void(0)" tabindex="-1">
+                  <i class="fas fa-angle-left"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="javascript:void(0)">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">2 <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">
+                  <i class="fas fa-angle-right"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+

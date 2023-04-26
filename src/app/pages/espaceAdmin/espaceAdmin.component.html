@@ -1,0 +1,297 @@
+
+<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 300px; background-image: url(assets/img/theme/aa.jpg); background-size: cover; background-position: center top;">
+  <!-- Mask -->
+  <span class="mask bg-gradient-danger opacity-8"></span>
+  <!-- Header container -->
+  <div class="container-fluid d-flex align-items-center">
+      <div class="col-lg-7 col-md-10">
+        <h1 class="display-2 text-white">Bienvenue dans l'espace d'administrateur</h1>
+        <p class="text-white mt-0 mb-5">The smart university permet la gestion des clubs et des evenements...</p>
+      </div>
+    </div>
+  </div>
+<div class="container-fluid mt--7">
+  <div class="row" style="justify-content: space-evenly">
+    <div class="col-xl-5 order-xl-2 mb-5 mb-xl-0">
+      <div class="card card-profile shadow">
+        <div class="row justify-content-center">
+          <div class="col-lg-3 order-lg-2">
+            <div class="card-profile-image">
+              <a href="javascript:void(0)">
+                <img src="assets/img/theme/sirine.jpg" class="rounded-circle">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body pt-0  pt-md-4">
+          <div class="row">
+            <div class="col">
+              <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <p>               </p>
+            <h3>
+              Sirine Bourbiaa<span class="font-weight-light">, 23</span>
+            </h3>
+            <div class="h5 font-weight-300">
+              <i class="ni location_pin mr-2"></i>Tunisie, Bizerte
+            </div>
+            <div class="h5 mt-4">
+              <i class="ni business_briefcase-24 mr-2"></i>Gestion clubs et evenements
+            </div>
+            <div>
+              <i class="ni education_hat mr-2"></i>Université de carthage
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-5 order-xl-1">
+      <div class="card bg-secondary shadow">
+        <div class="card-header bg-white border-0">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <h3 style ="text-align: center">La validation Des Demandes</h3>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+
+            <hr class="my-2" />
+            <!-- Description -->
+            
+              <div class="card-header text-center border-0 pt-4 pt-md-4 pb-0 pb-md-4">
+                <div class="d-flex justify-content-between align-items-center" style="flex-direction: column">
+                  <a routerLinkActive="active" [routerLink]="['/register']"  class="btn btn-sm btn-info mr-4">V.Demande Creation Club</a>
+                  <p>                </p>
+                  <a routerLinkActive="active" [routerLink]="['/tables']" class="btn btn-sm btn-default float-right">V.Demande Lancement Event</a>
+                  <p>                 </p>
+                  <a routerLinkActive="active" [routerLink]="['/abscence-ens']" class="btn btn-sm btn-primary">V.Demande Renouvellement Club</a>
+                </div>
+              </div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+<!-- Table 2-->
+<div class="row" style="margin-top: 20px;">
+  <div class="col">
+    <div class="card shadow" >
+      <div class="card-header border-0">
+        <h3 class="mb-0 align-items-center ">Liste des clubs</h3>
+       
+      </div>
+      <div class="table-responsive">
+        <table class="table align-items-center table-flush">
+          <thead class="thead-light">
+            <tr>
+              
+              <th scope="col">Nom de club</th>
+              <th scope="col">Date de creation</th>
+              <th scope="col">Description</th>
+              <th scope="col">Nb Membres</th>
+              <th scope="col">Type </th>
+              <th scope="col">Responsable </th>
+              <th scope="col">Actions </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let club of clubs">
+              <th scope="row">
+                <div class="media align-items-center">
+                  <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
+                    <img alt="Image placeholder" src='{{ club.url_logo}}'>
+                  </a>
+                  <div class="media-body">
+                    <span class="mb-0 text-sm">{{ club.nom}}</span>
+                  </div>
+                </div>
+              </th>
+              <td>
+                {{ club.date_creation}}
+               
+              </td>
+              <td>
+                {{ club.description}}
+                </td>
+              <td>
+                {{ club.nb_membre}}
+              </td>
+              
+              <td>
+                {{ club.type}}        
+                     </td>
+               <td>
+                {{ club.responsable}}
+               </td>
+            
+               <td class="text-right"> 
+                
+                  <button class="btn btn-warning" (click)="updateClub(club.id)" type="button">Modifier</button>
+              
+              <button style="height: 35px;" class="btn btn-danger btn-xs" (click)="removeClub(club.id)" type="button">Supprimer</button>
+               </td>
+
+             
+            </tr>
+            <tr *ngFor="let club of clubs2">
+              <th scope="row">
+                <div class="media align-items-center">
+                  <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
+                    <img alt="Image placeholder" src="assets/img/theme/nv.png">
+                  </a>
+                  <div class="media-body">
+                    <span class="mb-0 text-sm">{{ club.nomClub}}</span>
+                  </div>
+                </div>
+              </th>
+              <td>
+                {{ club.dateLance}}
+               
+              </td>
+              <td>
+                {{ club.description}}
+                </td>
+              <td>
+                {{ club.nbMembre}}
+              </td>
+              
+              <td>
+                {{ club.type}}        
+                     </td>
+               <td>
+                {{ club.nom_president}}
+               </td>
+            
+               <td class="text-right"> <div class="btn btn-warning btn-xs">Modifier</div>
+           
+              <button class="btn btn-danger btn-xs" (click)="removeClub(club.id)" type="button">Supprimer</button>
+               </td>
+
+             
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer py-4">
+        <nav aria-label="...">
+          <ul class="pagination justify-content-end mb-0">
+            <li class="page-item disabled">
+              <a class="page-link" href="javascript:void(0)" tabindex="-1">
+                <i class="fas fa-angle-left"></i>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="javascript:void(0)">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0)">2 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0)">
+                <i class="fas fa-angle-right"></i>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Table 1-->
+<div class="row" style="margin-top: 20px;">
+  <div class="col">
+    <div class="card shadow" >
+      <div class="card-header border-0">
+        <h3 class="mb-0 align-items-center ">Liste des événements</h3>
+       
+      </div>
+      <div class="table-responsive">
+        <table class="table align-items-center table-flush">
+          <thead class="thead-light">
+            <tr>
+              
+              <th scope="col">Nom de l'Event</th>
+              <th scope="col">Type de l'Event</th>
+              <th scope="col">Description</th>
+              <th scope="col">Date de l'Event</th>
+              <th scope="col">Place</th>
+              <th scope="col">Actions </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let event of events">
+              <th scope="row">
+                <div class="media align-items-center">
+                  <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
+                    <img alt="Image placeholder" src=' {{ event.url_img}}'>
+                  </a>
+                  <div class="media-body">
+                    <span class="mb-0 text-sm">{{ event.titre }}</span>
+                  </div>
+                </div>
+              </th>
+              <td>
+                {{ event.type }}
+                
+              </td>
+              <td>
+                {{ event.description}}
+                </td>
+              <td>
+                {{ event.date }}
+              </td>
+              <td>
+                {{ event.place}}
+              </td>
+              
+               <td class="text-right">
+                <button class="btn btn-warning" (click)="updateEvent(event.id)" type="button">Modifier</button>
+             <button class="btn btn-danger btn-xs" style="height: 35px;"(click)="removeEvent(event.id)" type="button">Supprimer</button>
+
+               </td>
+
+             
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer py-4">
+        <nav aria-label="...">
+          <ul class="pagination justify-content-end mb-0">
+            <li class="page-item disabled">
+              <a class="page-link" href="javascript:void(0)" tabindex="-1">
+                <i class="fas fa-angle-left"></i>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="javascript:void(0)">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0)">2 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0)">
+                <i class="fas fa-angle-right"></i>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
